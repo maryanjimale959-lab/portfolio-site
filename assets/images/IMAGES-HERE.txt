@@ -1,0 +1,7 @@
+Add your photos to this folder with these names:
+
+  profile.jpg       — your main photo (hero section)
+  social-preview.png — image shown when sharing on WhatsApp (1200×630 recommended)
+  gallery-1.jpg … gallery-6.jpg — gallery photos
+
+Then edit index.html to update photo captions.
