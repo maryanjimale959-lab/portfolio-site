@@ -462,15 +462,7 @@ function renderProjects(projects, { fromGithub }) {
 
 
 
-    const stat = document.querySelector('.stat-number[data-target]');
 
-    if (stat && fromGithub) {
-
-        stat.dataset.target = String(projects.length);
-
-        stat.textContent = '0';
-
-    }
 
 }
 
