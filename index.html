@@ -6,34 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariam Hassan Jimale | IT Student & Developer</title>
     <meta name="description"
-        content="Portfolio of Mariam Hassan Jimale — IT student, projects in web development, AI, and systems programming.">
-    <!-- Social preview (WhatsApp, LinkedIn) — update SITE_URL in script.js after you deploy -->
+        content="Portfolio of Mariam Hassan Jimale — Python developer, game builder and AI tinkerer from Mogadishu. Projects include a Go engine with MCTS AI, Somali streaming apps and voice-assistive tech.">
+    <!-- Social preview (WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mariam Hassan Jimale | IT Student & Developer">
-    <meta property="og:description" content="Explore my projects and journey as an IT student and developer.">
+    <meta property="og:description" content="Building software that solves real problems — games, AI and apps in Python, C++ and the web.">
     <meta property="og:image" content="assets/images/profile.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mariam Hassan Jimale | Portfolio">
-    <meta name="twitter:description" content="IT student — projects and code.">
+    <meta name="twitter:description" content="IT student — games, AI and real-world projects.">
     <meta name="twitter:image" content="assets/images/profile.jpg">
-    <link rel="icon" href="assets/images/profile.jpg" type="image/jpeg">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Press+Start+2P&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
+    <div class="scanlines" aria-hidden="true"></div>
+
     <header class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#home" class="nav-logo">Mariam<span>.</span></a>
+            <a href="#home" class="nav-logo">Mariam<span>.</span><span class="logo-cursor" aria-hidden="true">_</span></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#work">Projects</a></li>
                 <li><a href="#contact" class="nav-contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Open menu">
@@ -43,53 +46,71 @@
     </header>
 
     <main>
-        <!-- Hero -->
+        <!-- ============ HERO ============ -->
         <section id="home" class="hero">
+            <canvas id="particles" class="particles" aria-hidden="true"></canvas>
             <div class="container">
                 <div class="hero-grid">
-                    <div>
-                        <p class="hero-eyebrow">IT Student & Developer</p>
+                    <div class="hero-copy">
+                        <p class="hero-badge"><span class="pulse-dot"></span> AVAILABLE FOR INTERNSHIPS &amp; OPPORTUNITIES</p>
+                        <p class="hero-eyebrow">SELECT YOUR DEVELOPER</p>
                         <h1>Mariam Hassan Jimale</h1>
-                        <p class="hero-role">Building software that solves real problems.</p>
+                        <p class="hero-role">Building <span id="typeTarget" class="type-text">games</span><span
+                                class="type-cursor">▌</span></p>
                         <p class="hero-bio">
-                            I specialize in Python development, building robust backend systems, integrating AI into
-                            practical tools,
-                            and writing systems-level code in C++. Currently studying IT and open to new opportunities.
+                            IT student &amp; advanced Python developer from Mogadishu. I build game engines with AI,
+                            voice-assistive apps, and streaming platforms my own community actually uses — then ship
+                            them with C++, Django and a love for the details.
                         </p>
                         <div class="hero-actions">
-                            <a href="#work" class="btn btn-fill">See my work</a>
+                            <a href="#work" class="btn btn-fill">▶ &nbsp;See my work</a>
                             <a href="https://github.com/maryanjimale959-lab" class="btn btn-outline" target="_blank"
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
+                        <div class="hero-hint" aria-hidden="true">↓ scroll to continue</div>
                     </div>
-                    <div class="hero-avatar">
-                        <img src="assets/images/profile.jpg" alt="Mariam Hassan Jimale" class="hero-photo">
-                        <span class="hero-initials" aria-hidden="true">MH</span>
+                    <div class="hero-stage">
+                        <div class="stage-frame">
+                            <div class="stage-label">PLAYER 1 — <b>MARYAM.J</b></div>
+                            <canvas id="mascotCanvas" class="mascot" width="240" height="300" role="img"
+                                aria-label="Pixel-art avatar of Mariam"></canvas>
+                            <div class="stage-stats">
+                                <span>PY <b>LV.9</b></span>
+                                <span>C++ <b>LV.7</b></span>
+                                <span>AI <b>LV.8</b></span>
+                                <span>JS <b>LV.8</b></span>
+                            </div>
+                        </div>
+                        <div class="stage-shadow" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About -->
-        <section id="about" class="section section-alt">
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="section">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-num">01 — About</span>
-                    <h2>A bit about me</h2>
+                    <span class="section-num">[ 01 — ABOUT ]</span>
+                    <h2>The origin story</h2>
                     <p>Passionate about technology, learning, and building things that matter.</p>
                 </div>
                 <div class="about-grid">
+                    <div class="about-photo reveal">
+                        <div class="pixel-frame">
+                            <img src="assets/images/profile.jpg" alt="Mariam Hassan Jimale">
+                        </div>
+                        <div class="photo-caption">MARYAM.JPG — real life mode</div>
+                    </div>
                     <div class="about-text reveal">
                         <p>
                             I'm an IT student and an advanced Python developer who loves turning ideas into working
-                            software — from AI-powered
-                            tools and robust backend APIs to low-level C++ applications.
+                            software — from AI-powered tools and robust backend APIs to low-level C++ applications.
                         </p>
                         <p>
-                            I have a strong expertise in writing clean, scalable Python code and mastering its
-                            ecosystem. Whether it's engineering a complex Django or FastAPI backend, crafting a React
-                            frontend, or collaborating on team software, I enjoy the full process of building and
-                            shipping projects.
+                            My favourite projects are the ones people around me actually use: a Somali streaming app
+                            for music, podcasts and Quran, a Go board game with an AI that beats you using MCTS, and a
+                            voice-controlled helper that listens in English, Arabic and Somali.
                         </p>
                         <div class="stats-row">
                             <div class="stat-box">
@@ -102,133 +123,326 @@
                             </div>
                             <div class="stat-box">
                                 <strong class="stat-number" data-target="8">0</strong>
-                                <span>Team Projects</span>
+                                <span>Shipped Apps</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="about-cards reveal">
-                        <div class="about-card">
-                            <h3>Python Specialist</h3>
-                            <p>Highly proficient in Python, building scalable backends, automation scripts, and
-                                full-stack apps.</p>
-                        </div>
-                        <div class="about-card">
-                            <h3>AI Integration</h3>
-                            <p>Building intelligent features with modern LLM APIs and tools.</p>
-                        </div>
-                        <div class="about-card">
-                            <h3>Systems Programming</h3>
-                            <p>C++ development, algorithms, and low-level problem solving.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section id="skills" class="section">
+        <!-- ============ SKILLS ============ -->
+        <section id="skills" class="section section-alt">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-num">02 — Skills</span>
+                    <span class="section-num">[ 02 — SKILL TREE ]</span>
                     <h2>What I work with</h2>
                     <p>Technologies and tools I use across my projects.</p>
                 </div>
                 <div class="skills-layout">
-                    <div class="skill-group reveal">
-                        <h3>Languages</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python (Advanced)</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">HTML / CSS</span>
+                    <div class="skill-panel reveal">
+                        <h3><span class="panel-icon" data-sprite="code"></span> Languages</h3>
+                        <div class="bar-row" data-level="95"><span class="bar-label">Python</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span
+                                class="bar-num">95</span></div>
+                        <div class="bar-row" data-level="80"><span class="bar-label">JavaScript</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span
+                                class="bar-num">80</span></div>
+                        <div class="bar-row" data-level="75"><span class="bar-label">C++</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">75</span>
+                        </div>
+                        <div class="bar-row" data-level="90"><span class="bar-label">HTML / CSS</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">90</span>
                         </div>
                     </div>
-                    <div class="skill-group reveal">
-                        <h3>Frameworks</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Django</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">React</span>
+                    <div class="skill-panel reveal">
+                        <h3><span class="panel-icon" data-sprite="layers"></span> Frameworks</h3>
+                        <div class="bar-row" data-level="90"><span class="bar-label">Django</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">90</span>
+                        </div>
+                        <div class="bar-row" data-level="85"><span class="bar-label">FastAPI</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">85</span>
+                        </div>
+                        <div class="bar-row" data-level="85"><span class="bar-label">Flask</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">85</span>
+                        </div>
+                        <div class="bar-row" data-level="80"><span class="bar-label">React</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">80</span>
                         </div>
                     </div>
-                    <div class="skill-group reveal">
-                        <h3>AI & Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">LLM APIs</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Databases</span>
-                            <span class="skill-tag">REST APIs</span>
+                    <div class="skill-panel reveal">
+                        <h3><span class="panel-icon" data-sprite="bot"></span> AI &amp; Tools</h3>
+                        <div class="bar-row" data-level="85"><span class="bar-label">LLM APIs</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">85</span>
+                        </div>
+                        <div class="bar-row" data-level="90"><span class="bar-label">Git</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">90</span>
+                        </div>
+                        <div class="bar-row" data-level="85"><span class="bar-label">Databases</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">85</span>
+                        </div>
+                        <div class="bar-row" data-level="88"><span class="bar-label">REST APIs</span><span
+                                class="bar-track"><span class="bar-fill"></span></span><span class="bar-num">88</span>
                         </div>
                     </div>
-                    <div class="skill-group reveal">
-                        <h3>Other</h3>
+                    <div class="skill-panel reveal">
+                        <h3><span class="panel-icon" data-sprite="star"></span> Special Moves</h3>
                         <div class="skill-tags">
+                            <span class="skill-tag">Game AI (MCTS)</span>
                             <span class="skill-tag">UI / UX</span>
                             <span class="skill-tag">Responsive Design</span>
                             <span class="skill-tag">Socket Programming</span>
+                            <span class="skill-tag">Speech Recognition</span>
+                            <span class="skill-tag">PWA / Offline</span>
+                            <span class="skill-tag">i18n (EN · AR · SO)</span>
+                            <span class="skill-tag">Algorithms</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Work -->
-        <section id="work" class="section section-alt">
+        <!-- ============ ACHIEVEMENTS ============ -->
+        <section id="achievements" class="section">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-num">03 — Work</span>
-                    <h2>Selected projects</h2>
-                    <p>Projects from my GitHub — open any repo to read the README and explore the code.</p>
+                    <span class="section-num">[ 03 — ACHIEVEMENTS UNLOCKED ]</span>
+                    <h2>Battle scars &amp; trophies</h2>
+                    <p>Things I'm proud of, proven in code.</p>
                 </div>
-                <div class="projects-list" id="projectsList">
-                    <p class="projects-loading">Loading projects from GitHub…</p>
+                <div class="achieve-grid">
+                    <div class="achieve-card reveal"><span class="achieve-icon" data-sprite="brain"></span>
+                        <div><h3>MCTS Master</h3>
+                            <p>Built a Go game AI with Monte Carlo Tree Search from scratch in Python.</p>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal"><span class="achieve-icon" data-sprite="globe"></span>
+                        <div><h3>Trilingual Shipper</h3>
+                            <p>Apps speaking English, Arabic and Somali — real i18n, RTL included.</p>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal"><span class="achieve-icon" data-sprite="music"></span>
+                        <div><h3>Community Builder</h3>
+                            <p>Created Lahn — Somali music, podcasts, Quran &amp; stories streaming.</p>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal"><span class="achieve-icon" data-sprite="heart"></span>
+                        <div><h3>Accessibility Hero</h3>
+                            <p>Caawiye: voice-controlled assistive communication for people who need it most.</p>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal"><span class="achieve-icon" data-sprite="box"></span>
+                        <div><h3>40+ Python Projects</h3>
+                            <p>From Django backends to automation scripts — Python is my main weapon.</p>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal"><span class="achieve-icon" data-sprite="rocket"></span>
+                        <div><h3>Zero-Framework Shipper</h3>
+                            <p>This very site: hand-written pixel sprites, playable Go demo, no libraries.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Share -->
-        <section id="share" class="section share-section">
+        <!-- ============ GAMES ============ -->
+        <section id="games" class="section section-alt">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-num">Share</span>
-                    <h2>Share my portfolio</h2>
+                    <span class="section-num">[ 04 — ARCADE ]</span>
+                    <h2>Games &amp; a playable demo</h2>
+                    <p>My game-dev work — and yes, you can play right here.</p>
+                </div>
+                <div class="games-grid">
+                    <div class="game-feature reveal">
+                        <div class="go-wrap">
+                            <canvas id="goBoard" width="450" height="450" role="img"
+                                aria-label="Playable 9 by 9 Go board"></canvas>
+                            <div class="go-hud">
+                                <span id="goStatus" class="go-status">Your move — you play ● black</span>
+                                <div class="go-btns">
+                                    <button id="goNew" class="btn btn-mini" type="button">↺ New game</button>
+                                    <button id="goPass" class="btn btn-mini" type="button">Pass</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="go-copy">
+                            <span class="featured-label">Featured — playable demo</span>
+                            <h3>Go: The Surrounding Game</h3>
+                            <p>
+                                The ancient board game of Go, implemented in <b>pure Python</b>: full capture logic, ko
+                                rule, territory scoring, a <b>heuristic AI</b> and an <b>MCTS AI</b>, a 3D Tkinter
+                                board and a responsive web app.
+                            </p>
+                            <p class="go-mini-note">
+                                Mini version below: 9×9 rules-lite — captures work, ko is enforced, most stones on the
+                                board wins. Can you beat my JavaScript AI?
+                            </p>
+                            <div class="project-actions">
+                                <a class="project-link" href="https://github.com/maryanjimale959-lab/go-the-surrounding-game"
+                                    target="_blank" rel="noopener noreferrer">▶ &nbsp;Full Python engine on GitHub</a>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">Python</span><span class="stack-pill">MCTS</span><span
+                                    class="stack-pill">Game AI</span><span class="stack-pill">Tkinter 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-side">
+                        <article class="project-card small reveal">
+                            <span class="card-icon" data-sprite="mic"></span>
+                            <h3>Caawiye — voice helper</h3>
+                            <p>Speech-controlled assistive communication in EN / AR / SO. Tap the mic, it listens,
+                                answers instantly and keeps a log. Accessibility through web speech tech.</p>
+                            <div class="project-actions"><a class="project-link"
+                                    href="https://github.com/maryanjimale959-lab/Caawiye-App" target="_blank"
+                                    rel="noopener noreferrer">View code</a></div>
+                            <div class="project-stack"><span class="stack-pill">JavaScript</span><span
+                                    class="stack-pill">Speech API</span><span
+                                    class="stack-pill">Accessibility</span></div>
+                        </article>
+                        <article class="project-card small reveal">
+                            <span class="card-icon" data-sprite="puzzle"></span>
+                            <h3>Logic games lab</h3>
+                            <p>A growing collection of puzzle engines — Sudoku solver, Minesweeper and chess
+                                experiments — where I test game-AI ideas before they graduate into bigger projects.</p>
+                            <div class="project-stack"><span class="stack-pill">Python</span><span
+                                    class="stack-pill">JavaScript</span><span
+                                    class="stack-pill">Algorithms</span></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section id="work" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">[ 05 — QUEST LOG ]</span>
+                    <h2>Selected projects</h2>
+                    <p>Every card links to real, public code. Open a repo and read it.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <span class="card-icon" data-sprite="music"></span>
+                        <span class="featured-label">Featured</span>
+                        <h3>Lahn</h3>
+                        <p>Somali streaming for music, podcasts, Quran and stories — built for your own devices,
+                            because the big platforms overlook our content.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="https://github.com/maryanjimale959-lab/lahn" target="_blank"
+                                rel="noopener noreferrer">View code</a>
+                            <a class="project-link" href="https://github.com/maryanjimale959-lab/lahn#readme"
+                                target="_blank" rel="noopener noreferrer">README</a>
+                        </div>
+                        <div class="project-stack"><span class="stack-pill">JavaScript</span><span
+                                class="stack-pill">Audio</span><span class="stack-pill">Somali-first</span></div>
+                    </article>
+                    <article class="project-card reveal">
+                        <span class="card-icon" data-sprite="dumbbell"></span>
+                        <span class="featured-label">Featured</span>
+                        <h3>Powerfit</h3>
+                        <p>Bilingual (EN/AR) fitness PWA: workout library, walk tracker, food guide, dark/light
+                            themes — installable and offline-friendly.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="https://github.com/maryanjimale959-lab/powerfit"
+                                target="_blank" rel="noopener noreferrer">View code</a>
+                            <a class="project-link" href="https://github.com/maryanjimale959-lab/powerfit#readme"
+                                target="_blank" rel="noopener noreferrer">README</a>
+                        </div>
+                        <div class="project-stack"><span class="stack-pill">React</span><span
+                                class="stack-pill">Tailwind</span><span class="stack-pill">PWA</span><span
+                                class="stack-pill">Express</span></div>
+                    </article>
+                    <article class="project-card reveal">
+                        <span class="card-icon" data-sprite="phone"></span>
+                        <h3>Telephone Directory</h3>
+                        <p>Full-stack contact manager in Python &amp; Flask: dynamic search, complete CRUD, JSON
+                            persistence and a responsive Bootstrap 5 UI.</p>
+                        <div class="project-actions">
+                            <a class="project-link"
+                                href="https://github.com/maryanjimale959-lab/Telephone-Directory" target="_blank"
+                                rel="noopener noreferrer">View code</a>
+                            <a class="project-link"
+                                href="https://github.com/maryanjimale959-lab/Telephone-Directory#readme" target="_blank"
+                                rel="noopener noreferrer">README</a>
+                        </div>
+                        <div class="project-stack"><span class="stack-pill">Python</span><span
+                                class="stack-pill">Flask</span><span class="stack-pill">Bootstrap 5</span></div>
+                    </article>
+                    <article class="project-card reveal">
+                        <span class="card-icon" data-sprite="calendar"></span>
+                        <h3>Dhacdo.AI</h3>
+                        <p>The hub for AI events in Somalia — browse conferences, hackathons and workshops with
+                            search and location filters. Mogadishu tech, organised.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="https://github.com/maryanjimale959-lab/dhacdo-ai"
+                                target="_blank" rel="noopener noreferrer">View code</a>
+                        </div>
+                        <div class="project-stack"><span class="stack-pill">HTML</span><span
+                                class="stack-pill">CSS</span><span class="stack-pill">JavaScript</span></div>
+                    </article>
+                    <article class="project-card reveal">
+                        <span class="card-icon" data-sprite="terminal"></span>
+                        <h3>Python &amp; C++ workshop</h3>
+                        <p>40+ Python projects and 25+ C++ programs — data structures, algorithms, socket
+                            multi-chat systems and automation. The training ground behind everything else.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="https://github.com/maryanjimale959-lab?tab=repositories"
+                                target="_blank" rel="noopener noreferrer">Browse on GitHub</a>
+                        </div>
+                        <div class="project-stack"><span class="stack-pill">Python</span><span
+                                class="stack-pill">C++</span><span class="stack-pill">Sockets</span></div>
+                    </article>
+                    <article class="project-card reveal">
+                        <span class="card-icon" data-sprite="star"></span>
+                        <h3>This portfolio site</h3>
+                        <p>Dark arcade theme, hand-coded pixel sprites, playable Go opponent — built from scratch
+                            with zero frameworks. You're playing with it right now.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="https://github.com/maryanjimale959-lab/portfolio-site"
+                                target="_blank" rel="noopener noreferrer">View code</a>
+                        </div>
+                        <div class="project-stack"><span class="stack-pill">HTML</span><span
+                                class="stack-pill">CSS</span><span class="stack-pill">Canvas JS</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SHARE ============ -->
+        <section id="share" class="section section-alt share-section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">[ SHARE ]</span>
+                    <h2>Press Start to share</h2>
                     <p>Send this link to companies or share it on WhatsApp.</p>
                 </div>
                 <div class="share-panel reveal">
                     <div class="share-url-box">
-                        <label for="portfolioUrl">Your portfolio link</label>
+                        <label for="portfolioUrl">Live portfolio link</label>
                         <div class="share-url-row">
-                            <input type="text" id="portfolioUrl" readonly value="Deploy your site to get a link">
+                            <input type="text" id="portfolioUrl" readonly value="">
                             <button type="button" class="btn btn-outline" id="copyLinkBtn">Copy link</button>
                         </div>
-                        <p class="share-note" id="shareNote">After deploying, this field shows your live URL
-                            automatically.</p>
                     </div>
                     <div class="share-buttons">
                         <a href="#" class="share-btn share-whatsapp" id="shareWhatsApp" target="_blank"
-                            rel="noopener noreferrer">
-                            WhatsApp
-                        </a>
-                        <a href="https://github.com/maryanjimale959-lab" class="share-btn" target="_blank"
-                            rel="noopener noreferrer" style="background:#24292f;color:#fff;">
-                            GitHub
-                        </a>
-                    </div>
-                    <div class="share-tips">
-                        <p><strong>WhatsApp</strong> — Share with friends, family, or recruiters.</p>
-                        <p><strong>GitHub</strong> — Browse my repositories, code, and READMEs.</p>
+                            rel="noopener noreferrer">WhatsApp</a>
+                        <a href="https://github.com/maryanjimale959-lab" class="share-btn share-github" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="section section-alt">
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="section">
             <div class="container">
                 <div class="section-head reveal">
-                    <span class="section-num">04 — Contact</span>
-                    <h2>Let's connect</h2>
+                    <span class="section-num">[ 06 — CONTACT ]</span>
+                    <h2>Let's build something</h2>
                     <p>Open to internships, collaborations, and new project ideas.</p>
                 </div>
                 <div class="contact-grid">
@@ -273,7 +487,7 @@
                                 <p>github.com/maryanjimale959-lab</p>
                             </div>
                         </a>
-                        <a href="#contact" class="contact-link">
+                        <div class="contact-link contact-status">
                             <div class="contact-link-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     aria-hidden="true">
@@ -283,9 +497,9 @@
                             </div>
                             <div>
                                 <h4>Status</h4>
-                                <p>Available for opportunities</p>
+                                <p><span class="pulse-dot"></span> Available for opportunities</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <form class="contact-form reveal" id="contactForm">
                         <h3>Send a message</h3>
@@ -305,7 +519,8 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" placeholder="Your message..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-fill">Send message</button>
+                        <button type="submit" class="btn btn-fill">Send message →</button>
+                        <p class="form-note">Opens your email app, addressed straight to me.</p>
                     </form>
                 </div>
             </div>
@@ -314,7 +529,7 @@
 
     <footer class="footer">
         <div class="container footer-inner">
-            <p>&copy; 2026 Mariam Hassan Jimale</p>
+            <p>&copy; 2026 Mariam Hassan Jimale — made in Mogadishu with ☕ and pixels</p>
             <div class="footer-social">
                 <a href="mailto:maryanjimale959@gmail.com" aria-label="Email">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -339,6 +554,7 @@
         </div>
     </footer>
 
+    <script src="sprites.js"></script>
     <script src="script.js"></script>
 </body>
 
