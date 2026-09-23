@@ -1,24 +1,12 @@
 # Mariam Hassan Jimale — Portfolio
 
-Minimal dark portfolio — big typography, green glow, zero clutter.
-Pure HTML / CSS / JavaScript, no frameworks, no image assets beyond the portrait.
+Personal portfolio site for companies and recruiters.
 
-**Live site:** https://maryanjimale959-lab.github.io/portfolio-site
+**Live site:** https://maryanjimale959-lab.github.io/portfolio-site/
 
-## Structure
+**GitHub:** https://github.com/maryanjimale959-lab
 
-| File | Purpose |
-|---|---|
-| `index.html` | Single-page site: hero, about, skills, projects list, contact |
-| `style.css` | Black + mint-green theme, responsive, reduced-motion friendly |
-| `script.js` | Menu pill, scroll reveals, animated stat counters, Open Graph |
+## Contact
 
-Deployed with GitHub Pages from this repo (push to `main` = live in ~1 minute).
-
-## Editing
-
-- Projects are static entries in `index.html` (search for `class="project"`).
-- Accent color: `--accent` in `style.css`.
-- Contact details: hero + contact sections of `index.html`.
-
-Created by Mariam Hassan Jimale · Mogadishu
+- Email: maryanjimale959@gmail.com
+- WhatsApp: 252-770554982
