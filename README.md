@@ -1,8 +1,7 @@
 # Mariam Hassan Jimale — Portfolio
 
-Dark arcade-themed developer portfolio: hand-coded pixel sprites (no image assets),
-a playable 9×9 Go demo with a greedy AI opponent, animated RPG skill bars,
-achievements, and every project linked to public code.
+Minimal dark portfolio — big typography, green glow, zero clutter.
+Pure HTML / CSS / JavaScript, no frameworks, no image assets beyond the portrait.
 
 **Live site:** https://maryanjimale959-lab.github.io/portfolio-site
 
@@ -10,20 +9,16 @@ achievements, and every project linked to public code.
 
 | File | Purpose |
 |---|---|
-| `index.html` | Single-page site: hero, about, skills, achievements, arcade, projects, contact |
-| `style.css` | Dark purple arcade theme, responsive, reduced-motion friendly |
-| `sprites.js` | Pixel-art engine — every mascot/icon is a string map rendered to canvas |
-| `script.js` | Interactions, particles, and the Go game engine (captures, ko, territory scoring) |
+| `index.html` | Single-page site: hero, about, skills, projects list, contact |
+| `style.css` | Black + mint-green theme, responsive, reduced-motion friendly |
+| `script.js` | Menu pill, scroll reveals, animated stat counters, Open Graph |
 
-## Stack
-
-Pure HTML / CSS / JavaScript — zero frameworks, zero dependencies.
-Deployed with GitHub Pages from this repo.
+Deployed with GitHub Pages from this repo (push to `main` = live in ~1 minute).
 
 ## Editing
 
-- Projects live directly in `index.html` (search for `project-card`).
-- Pixel art: edit the string maps in `sprites.js` (`.` = transparent, letters = palette colors).
-- Contact details: `index.html` (contact section) and `SITE_URL` / email in `script.js`.
+- Projects are static entries in `index.html` (search for `class="project"`).
+- Accent color: `--accent` in `style.css`.
+- Contact details: hero + contact sections of `index.html`.
 
 Created by Mariam Hassan Jimale · Mogadishu
